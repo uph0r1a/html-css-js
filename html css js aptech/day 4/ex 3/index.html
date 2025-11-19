@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form class="contact-form" action="#" method="post">
+        <h1>Contact Us</h1>
+
+        <label for="name">Họ tên</label>
+        <input type="text" id="name" name="name" placeholder="Nhập họ tên" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Nhập email" required>
+
+        <label for="tel">Số điện thoại</label>
+        <input type="tel" id="tel" name="tel" placeholder="Nhập số điện thoại" required pattern="[0-9]{10,12}"
+            title="Nhập số điện thoại từ 10-12 chữ số">
+
+        <label for="message">Nội dung tin nhắn</label>
+        <textarea id="message" name="message" rows="4" placeholder="Nhập nội dung" required></textarea>
+
+        <button type="submit">Gửi</button>
+    </form>
+</body>
+
+</html>

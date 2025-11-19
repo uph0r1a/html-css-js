@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <form class="register-form" action="register.html" method="post">
+        <h1>Register Form</h1>
+
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" placeholder="Enter your name" required>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Enter your email" required>
+
+        <label for="id">ID</label>
+        <input type="text" name="id" id="id" placeholder="Enter your ID" required>
+
+        <fieldset>
+            <legend>Class</legend>
+            <input type="radio" name="class" id="C2506L-J" value="C2506L-J" required>
+            <label for="C2506L-J">C2506L-J</label>
+
+            <input type="radio" name="class" id="C2506L-C" value="C2506L-C">
+            <label for="C2506L-C">C2506L-C</label>
+        </fieldset>
+
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" placeholder="Enter your password" required>
+
+        <div class="button-group">
+            <button type="submit">Submit</button>
+            <button type="reset" id="reset">Reset</button>
+        </div>
+    </form>
+</body>
+
+</html>

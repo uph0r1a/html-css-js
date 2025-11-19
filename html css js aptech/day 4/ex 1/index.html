@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form đăng ký thành viên</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <form class="register-form" action="#" method="post" enctype="multipart/form-data">
+        <h1>Đăng ký thành viên</h1>
+
+        <div class="form-group">
+            <label for="name">Họ tên *</label>
+            <input type="text" id="name" name="name" placeholder="Nhập họ tên" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="Nhập email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Mật khẩu *</label>
+            <input type="password" id="password" name="password" placeholder="Nhập mật khẩu" required>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Số điện thoại</label>
+            <input type="tel" id="phone" name="phone" placeholder="Nhập số điện thoại">
+        </div>
+
+        <div class="form-group">
+            <label for="dob">Ngày sinh</label>
+            <input type="date" id="dob" name="dob">
+        </div>
+
+        <div class="form-group">
+            <label>Giới tính:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="gender" value="male"> Nam</label>
+                <label><input type="radio" name="gender" value="female"> Nữ</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Sở thích:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="hobby" value="reading"> Đọc sách</label>
+                <label><input type="checkbox" name="hobby" value="travel"> Du lịch</label>
+                <label><input type="checkbox" name="hobby" value="music"> Âm nhạc</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="country">Quốc gia</label>
+            <select id="country" name="country">
+                <option value="">--Chọn quốc gia--</option>
+                <option value="vn">Việt Nam</option>
+                <option value="us">Mỹ</option>
+                <option value="jp">Nhật Bản</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="education">Trình độ học vấn</label>
+            <input list="education-list" id="education" name="education">
+            <datalist id="education-list">
+                <option value="Cao đẳng">
+                <option value="Đại học">
+                <option value="Thạc sĩ">
+                <option value="Tiến sĩ">
+            </datalist>
+        </div>
+
+        <div class="form-group">
+            <label for="avatar">Ảnh đại diện</label>
+            <input type="file" id="avatar" name="avatar">
+        </div>
+
+        <div class="form-group">
+            <label for="color">Màu yêu thích</label>
+            <input type="color" id="color" name="color">
+        </div>
+
+        <div class="form-group">
+            <label for="satisfaction">Độ hài lòng</label>
+            <input type="range" id="satisfaction" name="satisfaction" min="0" max="10">
+        </div>
+
+        <div class="form-group">
+            <label for="website">Website cá nhân</label>
+            <input type="url" id="website" name="website" placeholder="https://">
+        </div>
+
+        <div class="form-group">
+            <label for="quantity">Số lượng đăng ký</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="10">
+        </div>
+
+        <div class="form-group">
+            <label for="message">Lời nhắn</label>
+            <textarea id="message" name="message" rows="3"></textarea>
+        </div>
+
+        <input type="hidden" name="token" value="123456">
+
+        <div class="form-actions">
+            <button type="submit">Đăng ký</button>
+            <input type="reset" value="Nhập lại">
+        </div>
+    </form>
+
+</body>
+
+</html>

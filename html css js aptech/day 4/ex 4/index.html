@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form class="register-form" action="#" method="post">
+        <h1>Event Registration</h1>
+
+        <label for="name">Họ tên</label>
+        <input type="text" id="name" name="name" placeholder="Nhập họ tên" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Nhập email" required>
+
+        <label>Giới tính</label>
+        <div class="radio-group">
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Nam</label>
+
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Nữ</label>
+        </div>
+
+        <label>Sở thích</label>
+        <div class="checkbox-group">
+            <input type="checkbox" id="reading" name="hobby" value="reading">
+            <label for="reading">Đọc sách</label>
+
+            <input type="checkbox" id="travel" name="hobby" value="travel">
+            <label for="travel">Du lịch</label>
+
+            <input type="checkbox" id="music" name="hobby" value="music">
+            <label for="music">Âm nhạc</label>
+
+            <input type="checkbox" id="elseCheck" name="hobby" value="else">
+            <label for="elseCheck">Khác:</label>
+            <input type="text" id="else" name="else" placeholder="Nhập sở thích khác">
+        </div>
+
+        <label for="country">Quốc gia</label>
+        <select id="country" name="country" required>
+            <option value="">--Chọn quốc gia--</option>
+            <option value="us">Mỹ</option>
+            <option value="jp">Nhật Bản</option>
+            <option value="uk">Anh</option>
+        </select>
+
+        <div style="display:flex; gap:10px; justify-content:center; margin-top:10px;">
+            <button type="submit">Submit</button>
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+</body>
+
+</html>
