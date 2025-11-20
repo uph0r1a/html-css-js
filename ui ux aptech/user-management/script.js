@@ -9,7 +9,6 @@ const submitBtn = document.getElementById("submitBtn");
 let users = [];
 let editId = null;
 
-// Render danh sách
 function renderUsers() {
   userList.innerHTML = "";
   users.forEach((user) => {
@@ -28,7 +27,6 @@ function renderUsers() {
   });
 }
 
-// Thêm hoặc cập nhật
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -40,14 +38,12 @@ form.addEventListener("submit", (e) => {
   if (!name || !email || !age || !gender) return;
 
   if (editId) {
-    // cập nhật user có id tương ứng
     users = users.map((u) =>
       u.id === editId ? { ...u, name, email, age, gender } : u
     );
     editId = null;
     submitBtn.textContent = "Thêm";
   } else {
-    // thêm user mới với id ngẫu nhiên
     users.push({
       id: Math.random().toString(36).slice(2),
       name,
@@ -61,7 +57,6 @@ form.addEventListener("submit", (e) => {
   renderUsers();
 });
 
-// Sửa user
 function editUser(id) {
   const user = users.find((u) => u.id === id);
   if (!user) return;
@@ -75,7 +70,6 @@ function editUser(id) {
   submitBtn.textContent = "Cập nhật";
 }
 
-// Xóa user
 function deleteUser(id) {
   if (confirm("Bạn có chắc muốn xóa người dùng này?")) {
     users = users.filter((u) => u.id !== id);

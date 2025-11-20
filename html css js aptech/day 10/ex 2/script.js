@@ -3,14 +3,14 @@ const red = document.getElementById("red");
 const green = document.getElementById("green");
 const yellow = document.getElementById("yellow");
 
-red.addEventListener("click",() => {
-    box.style.background = "red";
-})
+red.addEventListener("click", () => {
+  box.style.background = "red";
+});
 
-green.addEventListener("click",() => {
-    box.style.background = "green";
-})
+green.addEventListener("click", () => {
+  box.style.background = "green";
+});
 
-yellow.addEventListener("click",() => {
-    box.style.background = "yellow";
-})
+yellow.addEventListener("click", () => {
+  box.style.background = "yellow";
+});

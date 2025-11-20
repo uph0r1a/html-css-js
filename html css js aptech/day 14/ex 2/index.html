@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Sản phẩm</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="container">
+        <h1>Quản lý Sản phẩm</h1>
+
+        <input type="text" id="search" placeholder="Tìm kiếm theo tên sản phẩm">
+
+        <form id="product-form">
+            <input type="text" id="name" placeholder="Tên sản phẩm" required>
+            <input type="number" id="price" placeholder="Giá" min="0" required>
+            <input type="number" id="amount" placeholder="Số lượng" min="0" required>
+            <textarea id="description" placeholder="Mô tả (tùy chọn)"></textarea>
+            <button type="submit" id="submitBtn">Thêm</button>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Tên sản phẩm</th>
+                    <th>Giá</th>
+                    <th>Số lượng</th>
+                    <th>Mô tả</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody id="product-tbody">
+            </tbody>
+        </table>
+
+        <div id="totalValue">Tổng giá trị tồn kho: 0</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

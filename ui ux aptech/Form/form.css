@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  background: #f9fafb;
+}
+
+.image {
+  flex: 1.2;
+  background: url('./image/1d364e9f2594f61c316f5253e578dadde434aa8c.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.form-container {
+  flex: 1;
+  padding: 40px 60px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y: auto;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #101828;
+  margin-bottom: 12px;
+}
+
+p {
+  font-size: 16px;
+  color: #475467;
+  margin-bottom: 32px;
+}
+
+a {
+  color: #6941c6;
+  text-decoration: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #344054;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #101828;
+  background: #fff;
+}
+
+#phone {
+  display: flex;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+
+#phone select {
+  width: 25%;
+  border-right: 1px solid #d0d5dd;
+  background: #f9fafb;
+}
+
+#phone input {
+  width: 75%;
+  border: none;
+}
+
+textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.services label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #344054;
+}
+
+.services input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  accent-color: #6941c6;
+  cursor: pointer;
+}
+
+.services-label {
+  margin-bottom: 8px;
+  display: block;
+}
+
+
+button {
+  background: #6941c6;
+  color: #fff;
+  padding: 14px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #53389e;
+}

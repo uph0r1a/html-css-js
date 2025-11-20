@@ -1,13 +1,11 @@
 const p = document.getElementById("para");
-const content = p.textContent;
+const btnHide = document.getElementById("gone");
+const btnShow = document.getElementById("show");
 
-const show = document.getElementById("show");
-const gone = document.getElementById("gone");
+btnHide.addEventListener("click", () => {
+  p.style.display = "none";
+});
 
-show.addEventListener("click", () => {
-    p.textContent = content;
-})
-
-gone.addEventListener("click", () => {
-    p.textContent = "";
-})
+btnShow.addEventListener("click", () => {
+  p.style.display = "block";
+});

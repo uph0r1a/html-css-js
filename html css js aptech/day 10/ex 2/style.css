@@ -1,0 +1,12 @@
+#box {
+    width: 100px;
+    height: 100px;
+    background: gray;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 8px 14px;
+    margin-right: 5px;
+    cursor: pointer;
+}

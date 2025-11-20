@@ -1,11 +1,302 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/5abffc5209.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    
+    <div class="card">
+        <div class="vendor-header">
+            <div class="vendor-top">
+                <h2>
+                    Vendor movements
+                    <span
+                        style="color:#6941c6; font-size:12px; background-color: #f0ecfb; border-radius: 9999px; padding: 5px;">
+                        240 vendors
+                    </span>
+                </h2>
+                <div class="vendor-actions">
+                    <button class="import-btn" style=" border: 1px solid #ccc;">
+                        <i class="fa-solid fa-cloud-arrow-up"></i> Import
+                    </button>
+                    <button class="add-vendor-btn">
+                        <i class="fa-solid fa-plus"></i> Add vendor
+                    </button>
+                </div>
+            </div>
+            <p class="subtitle" style="color: gray;">Keep track of vendor and their security ratings.</p>
+        </div>
+
+        <div class="top-actions">
+            <div class="tabs">
+                <button>View all</button>
+                <button>Monitored</button>
+                <button>Text</button>
+            </div>
+            <div class="search-filter">
+                <div class="search-box-wrapper">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" name="Search" class="search-box" placeholder="Search">
+                </div>
+                <div class="filter-btn"><i class="fa-solid fa-filter"></i> Filters</div>
+            </div>
+
+        </div>
+
+        <table>
+            <tr>
+                <th><i class="fa-solid fa-minus"
+                        style="border: 1px solid #6941c6; color: #6941c6; border-radius: 5px; padding: 2px;"></i> Vendor
+                    <i class="fa-solid fa-arrow-down"></i>
+                </th>
+                <th>Rating</th>
+                <th>Last assessed</th>
+                <th>License use</th>
+                <th></th>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="vendor">
+                        <i class="fa-solid fa-check"
+                            style="border: 1px solid #6941c6; color: #6941c6; border-radius: 5px; padding: 2px;"></i>
+                        <img src="image/e04837e22b69a171bcb6616df2ba441a240212d6.jpg" />
+                        <div>
+                            <strong>Catalog</strong><br>
+                            <span style="color:#667085; font-size:13px;">catalogapp.io</span>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="rating-container">
+                        <div class="rating-bar">
+                            <div class="rating-bar-fill" style="width:60%;"></div>
+                        </div>
+                        <span>60</span>
+                        <span class="tag" style="color: green; font-weight: 700; background-color: #ECFDF3;">
+                            <i class="fa-solid fa-arrow-up" style="color: #12b76a;"></i> 5%
+                        </span>
+                    </div>
+                </td>
+
+                <td>22 Jan 2022</td>
+                <td>
+                    <span class="status active" style="color: green; font-weight: 700;">● Active</span>
+                    <span class="tag" style="background-color: #EFF8FF; color: blue;font-weight: 700;">Customer
+                        data</span>
+                    <span class="tag" style="background-color: #EEF4FF;font-weight: 700;color: #3538CD;">Admin</span>
+                    <span class="tag" style="background-color: #F2F4F7; font-weight: 700;">+4</span>
+                </td>
+                <td class="actions"><i class="fa-solid fa-trash"></i> <i class="fa-solid fa-pen"></i></td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <div class="vendor">
+                        <i class="fa-solid fa-check"
+                            style="border: 1px solid #6941c6; color: #6941c6; border-radius: 5px; padding: 2px;"></i>
+                        <img src="image/6a8c33475a5bd04866ffcbaf905a88c2560ab8c1.jpg" />
+                        <div>
+                            <strong>Circooles</strong><br>
+                            <span style="color:#667085; font-size:13px;">getcirooles.com</span>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="rating-container">
+                        <div class="rating-bar">
+                            <div class="rating-bar-fill" style="width:72%;"></div>
+                        </div>
+                        <span style="margin-left:8px;">72</span>
+                        <span class="tag" style="color: #B42318; font-weight: 700; background-color: #FEF3F2;"><i
+                                class="fa-solid fa-arrow-down" style="color: #f04438;"></i> 4%</span>
+                    </div>
+                </td>
+                <td>20 Jan 2022</td>
+                <td>
+                    <span class="status active" style="color: green; font-weight: 700;">● Active</span>
+                    <span class="tag" style="background-color: #F9F5FF; font-weight: 700;color: #6941C6;">Business
+                        data</span>
+                    <span class="tag" style="background-color: #EEF4FF;font-weight: 700;color: #3538CD;">Admin</span>
+                    <span class="tag" style="background-color: #F2F4F7; font-weight: 700;">+2</span>
+                </td>
+                <td class="actions"><i class="fa-solid fa-trash"></i> <i class="fa-solid fa-pen"></i></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="vendor">
+                        <i class="fa-solid fa-check"
+                            style="border: 1px solid #6941c6; color: #6941c6; border-radius: 5px; padding: 2px;"></i>
+                        <img src="image/f8bcea60209de895330e196e9c5167298098f11d.jpg" />
+                        <div>
+                            <strong>Command+R</strong><br>
+                            <span style="color:#667085; font-size:13px;">cmdr.ai</span>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="rating-container">
+                        <div class="rating-bar">
+                            <div class="rating-bar-fill" style="width:78%;"></div>
+                        </div>
+                        <span style="margin-left:8px;">78</span>
+                        <span class="tag" style="color: green; font-weight: 700; background-color: #ECFDF3;"><i
+                                class="fa-solid fa-arrow-up" style="color: #12b76a;"></i> 6%</span>
+                    </div>
+                </td>
+                <td>24 Jan 2022</td>
+                <td>
+                    <span class="status active" style="color: green; font-weight: 700;">● Active</span>
+                    <span class="tag" style="background-color: #EFF8FF; color: blue;font-weight: 700;">Customer
+                        data</span>
+                    <span class="tag"
+                        style="background-color: #FDF2FA; color: #C11574; font-weight: 700;">Financials</span>
+                </td>
+                <td class="actions"><i class="fa-solid fa-trash"></i> <i class="fa-solid fa-pen"></i></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="vendor">
+                        <i class="fa-regular fa-square fa-lg" style="color: #6941c6;"></i>
+                        <img src="image/79f9fc26c678ac743fad0c84b5a767a24c788cec.jpg" />
+                        <div>
+                            <strong>Hourglass</strong><br>
+                            <span style="color:#667085; font-size:13px;">hourglass.app</span>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="rating-container">
+                        <div class="rating-bar">
+                            <div class="rating-bar-fill" style="width:38%;"></div>
+                        </div>
+                        <span style="margin-left:8px;">38</span>
+                        <span class="tag" style="color: green; font-weight: 700; background-color: #ECFDF3;"><i
+                                class="fa-solid fa-arrow-up" style="color: #12b76a;"></i> 8%</span>
+                    </div>
+                </td>
+                <td>26 Jan 2022</td>
+                <td>
+                    <span class="status active" style="color: green; font-weight: 700;">● Active</span>
+                    <span class="tag" style="background-color: #F8F9FC; color: #363F72; font-weight: 700;">Database
+                        access</span>
+                    <span class="tag" style="background-color: #EEF4FF;font-weight: 700;color: #3538CD;">Admin</span>
+                </td>
+                <td class="actions"><i class="fa-solid fa-trash"></i> <i class="fa-solid fa-pen"></i></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="vendor">
+                        <i class="fa-regular fa-square fa-lg" style="color: #6941c6;"></i>
+                        <img src="image/e8aa5d3a3d822909dd3c274e5ac1c80ef63111a4.jpg" />
+                        <div>
+                            <strong>Layers</strong><br>
+                            <span style="color:#667085; font-size:13px;">getlayers.io</span>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="rating-container">
+                        <div class="rating-bar">
+                            <div class="rating-bar-fill" style="width:42%;"></div>
+                        </div>
+                        <span style="margin-left:8px;">42</span>
+                        <span class="tag" style="color: #B42318; font-weight: 700; background-color: #FEF3F2;"><i
+                                class="fa-solid fa-arrow-down" style="color: #f04438;"></i> 1%</span>
+                    </div>
+                </td>
+                <td>18 Jan 2022</td>
+                <td>
+                    <span class="status active" style="color: green; font-weight: 700;">● Active</span>
+                    <span class="tag"
+                        style="background-color: #FFF6ED; color: #C4320A; font-weight: 700;">Salesforce</span>
+                    <span class="tag" style="background-color: #EEF4FF;font-weight: 700;color: #3538CD;">Admin</span>
+                    <span class="tag" style="background-color: #F2F4F7; font-weight: 700;">+2</span>
+                </td>
+                <td class="actions"><i class="fa-solid fa-trash"></i> <i class="fa-solid fa-pen"></i></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="vendor">
+                        <i class="fa-solid fa-check"
+                            style="border: 1px solid #6941c6; color: #6941c6; border-radius: 5px; padding: 2px;"></i>
+                        <img src="image/14be6cced0006d51bbc757acda1e29ba3e229e74.jpg" />
+                        <div>
+                            <strong>Quotient</strong><br>
+                            <span style="color:#667085; font-size:13px;">quotient.co</span>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="rating-container">
+                        <div class="rating-bar">
+                            <div class="rating-bar-fill" style="width:66%;"></div>
+                        </div>
+                        <span style="margin-left:8px;">66</span>
+                        <span class="tag" style="color: #B42318; font-weight: 700; background-color: #FEF3F2;"><i
+                                class="fa-solid fa-arrow-down" style="color: #f04438;"></i> 6%</span>
+                    </div>
+                </td>
+                <td>28 Jan 2022</td>
+                <td>
+                    <span class="status active" style="color: green; font-weight: 700;">● Active</span>
+                    <span class="tag" style="background-color: #F9F5FF; font-weight: 700;color: #6941C6;">Business
+                        data</span>
+                    <span class="tag" style="background-color: #EEF4FF;font-weight: 700;color: #3538CD;">Admin</span>
+                    <span class="tag" style="background-color: #F2F4F7; font-weight: 700;">+4</span>
+                </td>
+                <td class="actions"><i class="fa-solid fa-trash"></i> <i class="fa-solid fa-pen"></i></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="vendor">
+                        <i class="fa-solid fa-check"
+                            style="border: 1px solid #6941c6; color: #6941c6; border-radius: 5px; padding: 2px;"></i>
+                        <img src="image/57e1fddacfe6f53ca58f404a119d0aa9b2a8208c.jpg" />
+                        <div>
+                            <strong>Sisyphus</strong><br>
+                            <span style="color:#667085; font-size:13px;">sisyphus.com</span>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="rating-container">
+                        <div class="rating-bar">
+                            <div class="rating-bar-fill" style="width:91%;"></div>
+                        </div>
+                        <span style="margin-left:8px;">91</span>
+                        <span class="tag" style="color: green; font-weight: 700; background-color: #ECFDF3;"><i
+                                class="fa-solid fa-arrow-up" style="color: #12b76a;"></i> 2%</span>
+                    </div>
+                </td>
+                <td>16 Jan 2022</td>
+                <td>
+                    <span class="status active" style="color: #344054; font-weight: 700;background-color: #F2F4F7;">●
+                        Inactive</span>
+                    <span class="tag" style="background-color: #EFF8FF; color: blue; font-weight: 700;">Customer
+                        data</span>
+                    <span class="tag"
+                        style="background-color: #FDF2FA; color: #C11574; font-weight: 700;">Financials</span>
+                </td>
+                <td class="actions"><i class="fa-solid fa-trash"></i> <i class="fa-solid fa-pen"></i></td>
+            </tr>
+
+        </table>
+
+        <div class="pagination">
+            <span>Page 1 of 10</span>
+            <div>
+                <button>Previous</button>
+                <button>Next</button>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
