@@ -180,12 +180,12 @@ td {
 
 .rating-container {
     display: flex;
-    align-items: center; /* vertically center all elements */
-    gap: 8px; /* spacing between rating bar and spans */
+    align-items: center;
+    gap: 8px;
 }
 
 .rating-bar {
-    width: 500px; /* increased from 120px */
+    width: 500px;
     background: #f2e8ff;
     height: 6px;
     border-radius: 4px;

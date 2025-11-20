@@ -50,7 +50,7 @@ nav a {
     cursor: pointer;
 }
 
-.actions button:nth-child(2){
+.actions button:nth-child(2) {
     background-color: black;
     color: #fff;
 }
