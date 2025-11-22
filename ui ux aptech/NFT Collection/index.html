@@ -2,111 +2,242 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NFT Collection</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Defy — UI/UX Demo (pixel match)</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/5abffc5209.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <header>
-    <div class="logo"><img src="./180359aec4daac54a7771983ba733f2ca25a7af8.png" alt=""></div>
-    <nav>
-      <a href="#">Studio</a>
-      <a href="#">Closet</a>
-      <a href="#">Explore</a>
-    </nav>
-    <div class="actions">
-      <button>Login</button>
-      <button>Select Wallet</button>
-    </div>
-  </header>
 
-  <section class="hero">
-    <div class="text">
-      <h1>Transform The World</h1>
-      <p>Check out the most premium, unique and exclusive NFTs.</p>
-      <div class="buttons">
-        <button class="primary">Get started</button>
-        <button class="secondary">Learn more</button>
+  <div class="wrap">
+    <header class="nav">
+      <div class="nav-left">
+        <div class="logo"><img src="./image/180359aec4daac54a7771983ba733f2ca25a7af8.png" alt=""></div>
+        <nav class="nav-links">
+          <a href="#">Studio</a>
+          <a href="#">Closet</a>
+          <a href="#">Explore <i class="fa-solid fa-angle-down"></i></a>
+        </nav>
       </div>
-    </div>
-    <img src="./977be18c1259ac25a9f397ca4b8ce3228c330b2e.png" alt="NFT Example">
-  </section>
 
-  <section class="featured">
-    <div class="featured-header">
-      <h2>Featured Collections</h2>
-      <button>View all</button>
-    </div>
-    <div class="collection-grid">
-      <div class="card">
-        <img src="https://via.placeholder.com/200x200" alt="NFT">
-        <h4>Name of the collection</h4>
-        <p>Author Name</p>
-        <button>View collection</button>
+      <div class="nav-center">
+        <div class="search" aria-label="Search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="opacity:.6">
+            <path d="M21 21l-4.35-4.35" stroke="#666" stroke-width="1.6" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <circle cx="11" cy="11" r="6" stroke="#666" stroke-width="1.6" />
+          </svg>
+          <input placeholder="Search for collections, NFTs or users" /><span style="background-color: #E5E5E5;padding: 5px; width: 32px; height: 32px;">/</span>
+        </div>
       </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/200x200" alt="NFT">
-        <h4>Name of the collection</h4>
-        <p>Author Name</p>
-        <button>View collection</button>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/200x200" alt="NFT">
-        <h4>Name of the collection</h4>
-        <p>Author Name</p>
-        <button>View collection</button>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/200x200" alt="NFT">
-        <h4>Name of the collection</h4>
-        <p>Author Name</p>
-        <button>View collection</button>
-      </div>
-    </div>
-  </section>
 
-  <section class="features">
-    <div class="feature-box">
-      <h4>Set Up Your Wallet</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-    </div>
-    <div class="feature-box">
-      <h4>Create Your Collection</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-    </div>
-    <div class="feature-box">
-      <h4>Add Your NFTs</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-    </div>
-    <div class="feature-box">
-      <h4>List Them For Sale</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-    </div>
-  </section>
+      <div class="nav-right">
+        <button class="btn login">Login</button>
+        <button class="btn wallet">Select Wallet</button>
+      </div>
+    </header>
 
-  <footer>
-    <div class="footer-top">
-      <div>
-        <h4>Platform</h4>
-        <p>Studio<br>Closet<br>Discover<br>Collections<br>Contacts</p>
+    <section class="hero">
+      <div class="hero-left">
+        <div class="eyebrow">Transform The World</div>
+        <h2 style="font-size:40px;margin:0 0 12px;line-height:1.05;font-weight:800;">Check out the most
+          premium,<br>unique and exclusive NFTs</h2>
+        <div class="hero-sub">Check out the most premium, unique and exclusive NFTs</div>
+
+        <div class="hero-ctas">
+          <button class="btn cta-primary">Get started</button>
+          <button class="btn cta-secondary">Learn more</button>
+        </div>
       </div>
-      <div>
-        <h4>Note</h4>
-        <p>Defy is the platform where you can create, buy, and sell digital clothing NFTs from fashion designers and
-          virtual collections.</p>
+
+      <div class="hero-right">
+        <div class="hero-card" role="img" aria-label="Hero image">
+          <img class="hero-image" src="/mnt/data/UI_UX Demo_page-0001.jpg" alt="Hero artwork (uploaded screenshot)" />
+          <div class="hero-carousel-dots">
+            <div class="dot"></div>
+            <div class="dot inactive"></div>
+            <div class="dot inactive"></div>
+            <div class="dot inactive"></div>
+          </div>
+        </div>
       </div>
-      <div>
-        <h4>Ready for action</h4>
-        <p><strong>hello@defy.io</strong></p>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <h3>Featured Collections</h3>
+        <button class="btn" style="border-radius:12px;padding:8px 14px;font-weight:700;">View all</button>
       </div>
-    </div>
-    <div class="footer-bottom">
-      ©2025 Sciensa Future Trade · Privacy Policy · Terms & Conditions
-    </div>
-  </footer>
+
+      <div class="section-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet ipsum urna in diam mauris.
+      </div>
+
+      <div class="cards-grid" aria-label="Collections grid">
+
+        <div class="collection-card">
+          <div class="collection-thumb"
+            style="background-image: url('/mnt/data/UI_UX Demo_page-0001.jpg'); background-size:cover; background-position:center;">
+          </div>
+          <div class="collection-meta">
+            <div class="avatar"></div>
+            <div>
+              <div class="meta-text">Naomi Po</div>
+              <div class="meta-sub">Name of the collection</div>
+            </div>
+          </div>
+          <div class="view-collection">View collection</div>
+        </div>
+
+        <div class="collection-card">
+          <div class="collection-thumb" style="background: linear-gradient(180deg,#f8f2f8,#f1eef6)"></div>
+          <div class="collection-meta">
+            <div class="avatar"></div>
+            <div>
+              <div class="meta-text">Naomi Po</div>
+              <div class="meta-sub">Name of the collection</div>
+            </div>
+          </div>
+          <div class="view-collection">View collection</div>
+        </div>
+
+        <div class="collection-card">
+          <div class="collection-thumb" style="background: linear-gradient(180deg,#0b4aa6,#052a6a)"></div>
+          <div class="collection-meta">
+            <div class="avatar"></div>
+            <div>
+              <div class="meta-text">Naomi Po</div>
+              <div class="meta-sub">Name of the collection</div>
+            </div>
+          </div>
+          <div class="view-collection">View collection</div>
+        </div>
+
+        <div class="collection-card">
+          <div class="collection-thumb" style="background: linear-gradient(180deg,#dce8f2,#cdd9e6)"></div>
+          <div class="collection-meta">
+            <div class="avatar"></div>
+            <div>
+              <div class="meta-text">Naomi Po</div>
+              <div class="meta-sub">Name of the collection</div>
+            </div>
+          </div>
+          <div class="view-collection">View collection</div>
+        </div>
+
+        <div class="collection-card">
+          <div class="collection-thumb" style="background: linear-gradient(180deg,#0b0b0b,#1b1b1b)"></div>
+          <div class="collection-meta">
+            <div class="avatar"></div>
+            <div>
+              <div class="meta-text">Naomi Po</div>
+              <div class="meta-sub">Name of the collection</div>
+            </div>
+          </div>
+          <div class="view-collection">View collection</div>
+        </div>
+
+        <div class="collection-card">
+          <div class="collection-thumb" style="background: linear-gradient(180deg,#e8f3e6,#dbe9d8)"></div>
+          <div class="collection-meta">
+            <div class="avatar"></div>
+            <div>
+              <div class="meta-text">Naomi Po</div>
+              <div class="meta-sub">Name of the collection</div>
+            </div>
+          </div>
+          <div class="view-collection">View collection</div>
+        </div>
+
+        <div class="collection-card">
+          <div class="collection-thumb" style="background: linear-gradient(180deg,#1b1b1b,#2b2b2b)"></div>
+          <div class="collection-meta">
+            <div class="avatar"></div>
+            <div>
+              <div class="meta-text">Naomi Po</div>
+              <div class="meta-sub">Name of the collection</div>
+            </div>
+          </div>
+          <div class="view-collection">View collection</div>
+        </div>
+
+        <div class="collection-card">
+          <div class="collection-thumb" style="background: linear-gradient(180deg,#f7f7f7,#eaeaea)"></div>
+          <div class="collection-meta">
+            <div class="avatar"></div>
+            <div>
+              <div class="meta-text">Naomi Po</div>
+              <div class="meta-sub">Name of the collection</div>
+            </div>
+          </div>
+          <div class="view-collection">View collection</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="steps-row">
+      <div class="step">
+        <div class="icon">📦</div>
+        <h4>Set Up Your Wallet</h4>
+        <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for
+          previewing.</p>
+      </div>
+      <div class="step">
+        <div class="icon">🗂️</div>
+        <h4>Create Your Collection</h4>
+        <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for
+          previewing.</p>
+      </div>
+      <div class="step">
+        <div class="icon">🖼️</div>
+        <h4>Add Your NFTs</h4>
+        <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for
+          previewing.</p>
+      </div>
+      <div class="step">
+        <div class="icon">🏷️</div>
+        <h4>List Them For Sale</h4>
+        <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for
+          previewing.</p>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-card">
+        <div class="footer-left">
+          <h5>Platform</h5>
+          <ul>
+            <li>Studio</li>
+            <li>Closet</li>
+            <li>Discover</li>
+            <li>Market</li>
+            <li>FAQ</li>
+            <li>Contacts</li>
+          </ul>
+        </div>
+        <div class="footer-middle">
+          <h5>Note</h5>
+          <p>Defy is the platform where you can create, buy, and sell clothing-inspired NFTs. From digital garments to
+            virtual collections, Defy lets designers and enthusiasts explore new creative possibilities. Own unique
+            digital pieces and shape the future of style in the metaverse.</p>
+        </div>
+        <div class="footer-right">
+          <h4>Ready for action</h4>
+          <div style="font-weight:800;font-size:30px;">hello@defy.io</div>
+
+          <div class="socials">
+            <div class="circle">IG</div>
+            <div class="circle">LI</div>
+            <div class="circle">FB</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="copy">©2024 Success Funded Trader &nbsp;&nbsp;&nbsp; Privacy Policy &nbsp;&nbsp;&nbsp; Terms &
+        Conditions</div>
+    </footer>
+  </div>
 </body>
 
 </html>
