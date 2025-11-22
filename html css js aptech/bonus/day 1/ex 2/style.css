@@ -9,3 +9,78 @@ li {
     text-decoration: line-through;
     color: gray;
 }
+
+body {
+    font-family: Arial, sans-serif;
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 0 20px;
+    background: #f9f9f9;
+    color: #333;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#task_input {
+    width: 70%;
+    padding: 8px 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+#task_input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+#addBtn {
+    padding: 9px 14px;
+    font-size: 16px;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#addBtn:hover {
+    background: #005fcc;
+}
+
+li span {
+    flex-grow: 1;
+}
+
+li button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+li button:nth-child(2) {
+    background: #28a745;
+    color: white;
+}
+
+li button:nth-child(2):hover {
+    background: #1e7e34;
+}
+
+li button:nth-child(3) {
+    background: #dc3545;
+    color: white;
+}
+
+li button:nth-child(3):hover {
+    background: #b52a35;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
