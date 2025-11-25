@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Page</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="contact-body">
 
-    <div class="contact-container">
+<body class="body">
+
+    <div class="container">
         <h1>Contact Us</h1>
 
-        <form id="contactForm">
+        <form id="form">
             <label>Name:</label>
-            <input type="text" id="name">
+            <input type="text" id="name" placeholder="Name">
 
             <label>Email:</label>
-            <input type="text" id="email">
+            <input type="email" id="email" placeholder="Email">
 
             <label>Message:</label>
-            <textarea id="message"></textarea>
+            <textarea id="message" placeholder="Message"></textarea>
 
             <p id="error" class="error"></p>
 
             <button type="submit" class="btn">Submit</button>
         </form>
 
-        <button class="btn back-btn" onclick="goBack()">Back</button>
+        <button class="btn" id="back-btn">Back</button>
     </div>
 
     <script src="contact.js"></script>
 </body>
+
 </html>
