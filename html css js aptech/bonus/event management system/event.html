@@ -6,6 +6,51 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <form >
+        <label for="eventName">Event name</label>
+        <input type="text" name="eventName" id="eventName" placeholder="Enter event name">
+
+        <label for="eventCategory">Event category</label>
+        <select name="eventCategory" id="eventCategory">
+            <option value="music">Music</option>
+            <option value="music">Tech</option>
+            <option value="music">Sport</option>
+        </select>
+
+        <label for="eventDate">Event Date</label>
+        <input type="date" name="eventDate" id="eventDate" placeholder="Enter event date">
+
+        <label for="eventLocation">Event location</label>
+        <input type="text" name="eventLocation" id="eventLocation" placeholder="Enter event location">
+
+        <label for="eventPrice">Event price</label>
+        <input type="number" name="eventprice" id="eventprice" placeholder="Enter event price">
+
+        <label for="eventSeats">Event seats</label>
+        <input type="number" name="eventSeats" id="eventSeats" placeholder="Enter event seats">
+
+        <label for="eventLocation">Event thumbnail</label>
+        <input type="file" name="eventThumbnail" id="eventThumbnail" accept="image/*">
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Date</th>
+                <th>Location</th>
+                <th>Price</th>
+                <th>Seats</th>
+                <th>Thumbnail</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
 </body>
 </html>
