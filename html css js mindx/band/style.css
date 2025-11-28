@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #000;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: rgb(191, 187, 187);
+  color: black;
+}
+
+.hero-container img {
+  width: 100%;
+  display: block;
+}
+
+#band {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+#band h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.band-intro {
+  font-weight: bold;
+}
+
+.band-description {
+  max-width: 800px;
+  margin: 10px auto;
+  line-height: 1.6;
+}
+
+.members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 50px 20px;
+  gap: 30px;
+}
+
+.member {
+  text-align: center;
+  width: 250px;
+}
+
+.member img {
+  width: 200px;
+  height: 200px;
+  padding-top: 10px;
+}
+
+.tour-dates {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+.tour-dates ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.tour-dates li {
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.sold-out {
+  background-color: orange;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.tour-number {
+  background-color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  color: black;
+  text-align: center;
+  line-height: 30px;
+  display: inline-block;
+}
+
+.tour-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  color: black;
+}
+
+.tour-card {
+  background: #f4f4f4;
+  padding: 20px;
+  width: 250px;
+  text-align: left;
+}
+
+.tour-card img {
+  width: 100%;
+}
+
+.tour-card .tour-date {
+  color: gray;
+}
+
+.tour-card button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.tour-card button:hover {
+  background: rgb(191, 187, 187);
+  color: black;
+}
+
+#contact {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.contact-intro {
+  color: gray;
+  margin-bottom: 20px;
+}
+
+#flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.contact-info {
+  min-width: 200px;
+}
+
+.contact-form {
+  max-width: 400px;
+  text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  background: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #333;
+}
+
+footer {
+  color: gray;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+footer .social-icons {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+
+  .members,
+  .tour-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #flex {
+    flex-direction: column;
+  }
+}

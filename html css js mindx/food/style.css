@@ -1,144 +1,181 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: 0;
-    font-family: "Karma", sans-serif
+    box-sizing: border-box;
+    font-family: 'Karma', sans-serif;
 }
 
 .top-menu {
-    background-color: #ffff;
-    max-width: 1200px;
-    margin: auto;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
     display: flex;
     justify-content: space-between;
-    padding: 16px 16px;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 16px;
     font-size: 24px;
+    z-index: 100;
+    border-bottom: 1px solid #ccc;
+}
+
+.menu-icon {
+    cursor: pointer;
+}
+
+.logo {
+    font-weight: bold;
 }
 
 .page-content {
     max-width: 1200px;
     margin: auto;
-    padding-top: 50px;
+    padding: 40px 16px;
 }
 
 .grid-photo {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
 }
 
 .photo {
+    flex: 1 1 calc(25% - 16px);
     max-width: 300px;
-    padding: 0px 8px 50px 8px;
     text-align: center;
 }
 
 .photo img {
     width: 100%;
+    border-radius: 8px;
 }
 
 .photo h3 {
     font-weight: 400;
-    font-size: 24px;
-    width: 100%;
-    padding: 8px 0px 16px 0px;
+    font-size: 22px;
+    padding: 12px 0;
 }
 
 .photo p {
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.5;
 }
 
 .pagination {
-    padding: 16px 0px;
-}
-
-.bar {
+    padding: 16px 0;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .bar-items {
-    background-color: rgb(255, 255, 255);
-    padding: 8px 16px;
-    color: black;
     text-decoration: none;
+    color: black;
+    padding: 8px 16px;
+    margin: 0 4px;
+    background-color: #fff;
+    border-radius: 4px;
+    transition: 0.3s;
 }
 
 .bar-items:hover {
-    background-color: black;
-    color: #ffff;
+    background-color: #000;
+    color: #fff;
 }
 
-.highlight:hover {
-    background-color: #cccccc;
-    color: black;
+.bar-items.highlight {
+    background-color: #000;
+    color: #fff;
+}
+
+.bar-items.highlight:hover {
+    background-color: #333;
 }
 
 .about {
     text-align: center;
-}
-
-.about .content {
-    max-width: 100%;
-    height: auto;
-    padding: 0px 30px;
+    margin: 40px 0;
 }
 
 .about img {
     max-width: 100%;
-    height: auto;
-    padding: 0px 30px;
+    border-radius: 8px;
+    margin: 20px 0;
 }
 
-.about p {
-    padding-bottom: 62px;
+.about .content {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.6;
 }
 
 .footer {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
-    padding: 32px 15px 50px 15px;
+    justify-content: space-around;
+    background-color: #f1f1f1;
+    padding: 32px 16px;
+    gap: 24px;
 }
 
-.footer .footer-items {
-    width: 360px;
-    text-align: left;
-    padding: 14px 0px;
+.footer-items {
+    width: 300px;
 }
 
-.footer .footer-items .content-ul:hover {
-    background-color: #cccccc;
-}
-
-.footer .footer-items .content-ul .sub-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 37px;
-}
-
-.footer .footer-items .content-ul span {
-    height: 10px;
+.footer-items h2 {
+    margin-bottom: 12px;
 }
 
 .footer-items p {
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.5;
+    margin-bottom: 12px;
 }
 
-.footer-items .tag .key {
-    background-color: black;
+.footer-items ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-items .content-ul {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.footer-items .content-ul img {
+    width: 50px;
+    border-radius: 4px;
+    margin-right: 12px;
+}
+
+.footer-items .sub-content {
+    display: flex;
+    flex-direction: column;
 }
 
 .footer-items .tag span {
-    text-align: center;
+    display: inline-block;
     background-color: #616161;
-    color: #ffff;
-    padding: 4px 10px 0px 10px;
+    color: #fff;
+    padding: 4px 8px;
     margin: 4px 4px;
+    border-radius: 4px;
+}
+
+.footer-items .tag .key {
+    background-color: #000;
+}
+
+@media (max-width: 768px) {
+    .grid-photo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
 }

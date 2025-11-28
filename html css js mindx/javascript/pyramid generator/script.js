@@ -1,24 +1,16 @@
-const character = "!";
+const char = "!";
 const count = 10;
-const rows = [];
-let inverted = false;
+const inverted = false;
 
-function padRow(rowNumber, rowCount) {
-    return " ".repeat(rowCount - rowNumber) + character.repeat(2 * rowNumber - 1) + " ".repeat(rowCount - rowNumber);
+function padRow(row, max) {
+  const spaces = " ".repeat(max - row);
+  const symbols = char.repeat(row * 2 - 1);
+  return spaces + symbols + spaces;
 }
 
-for (let i = 1; i <= count; i++) {
-    if (inverted) {
-        rows.unshift(padRow(i, count));
-    } else {
-        rows.push(padRow(i, count));
-    }
-}
+const rows = Array.from({ length: count }, (_, i) => {
+  const rowNumber = inverted ? count - i : i + 1;
+  return padRow(rowNumber, count);
+});
 
-let result = ""
-
-for (const row of rows) {
-    result = result + row + "\n";
-}
-
-console.log(result);
+console.log(rows.join("\n"));

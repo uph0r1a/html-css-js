@@ -14,6 +14,7 @@
 body {
     background-color: var(--main-bg-color);
     text-align: center;
+    font-family: Arial, sans-serif;
 }
 
 .title {
@@ -25,48 +26,79 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 20px;
+    padding: 0 10px;
 }
 
 .user-card {
-    border-radius: 15px;
-    width: 300px;
-    height: 350px;
+    flex: 1 1 250px;
+    max-width: 300px;
     background-color: var(--light-grey);
-    margin: 20px;
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 350px;
 }
 
 .user-img {
     width: 150px;
     height: 150px;
     object-fit: cover;
+    border-radius: 50%;
 }
 
 .purple-divider {
     background-color: var(--dark-purple);
     width: 100%;
-    height: 15px;
+    height: 10px;
+    margin: 10px 0;
 }
 
 .author-name {
-    margin: 10px;
+    font-size: 1.2rem;
+    margin: 10px 0;
 }
 
 .bio {
-    margin: 20px;
+    margin: 10px 0;
+    font-size: 0.9rem;
+    flex-grow: 1;
+}
+
+.author-link {
+    color: var(--main-bg-color);
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
 .error-msg {
     color: var(--light-grey);
+    font-size: 1.1rem;
+    margin: 20px;
 }
 
 .btn {
     cursor: pointer;
     width: 200px;
-    margin: 10px;
-    color: var(--main-bg-color);
+    margin: 20px auto;
+    padding: 10px 0;
     font-size: 14px;
     background-color: var(--golden-yellow);
     background-image: linear-gradient(#fecc4c, #ffac33);
-    border-color: var(--golden-yellow);
-    border-width: 3px;
+    border: 3px solid var(--golden-yellow);
+    border-radius: 5px;
+}
+
+.btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+@media (max-width: 400px) {
+    .user-card {
+        flex: 1 1 100%;
+    }
 }

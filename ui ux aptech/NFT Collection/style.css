@@ -49,7 +49,7 @@ header.nav {
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.06);
 }
 
-.logo img{
+.logo img {
     width: 50px;
 }
 
@@ -184,11 +184,8 @@ header.nav {
 
 .hero-card {
     width: 420px;
-    border-radius: 12px;
     overflow: hidden;
     background: #fff;
-    box-shadow: 0 6px 22px rgba(16, 24, 40, 0.06);
-    border: 1px solid #eee;
 }
 
 .hero-image {
@@ -196,6 +193,7 @@ header.nav {
     height: 380px;
     object-fit: cover;
     display: block;
+    border-radius: 12px;
 }
 
 .hero-carousel-dots {
@@ -208,7 +206,7 @@ header.nav {
 
 .dot {
     height: 6px;
-    width: 44px;
+    width: 74px;
     background: #111;
     border-radius: 4px;
 }
@@ -238,7 +236,6 @@ header.nav {
 .section-desc {
     color: #666;
     margin: 10px 0 20px;
-    max-width: 620px;
 }
 
 .cards-grid {
@@ -255,13 +252,10 @@ header.nav {
     box-shadow: 0 6px 20px rgba(16, 24, 40, 0.03);
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
 
 .collection-thumb {
-    height: 170px;
-    border-radius: 10px;
-    background: linear-gradient(180deg, #f3f3f3, #ededf0);
+    height: 250px;
     overflow: hidden;
     display: block;
 }
@@ -299,7 +293,7 @@ header.nav {
     display: inline-block;
     padding: 10px 12px;
     border-radius: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid black;
     background: transparent;
     font-weight: 700;
     font-size: 13px;
@@ -324,7 +318,6 @@ header.nav {
     width: 56px;
     height: 56px;
     border-radius: 12px;
-    background: #f6f6f8;
     margin: 0 auto 14px;
     display: flex;
     align-items: center;
@@ -362,6 +355,7 @@ footer.site-footer {
 
 .footer-left {
     width: 220px;
+    height: 100%;
 }
 
 .footer-left h5 {
@@ -410,13 +404,14 @@ footer.site-footer {
     gap: 14px;
     justify-content: flex-end;
     margin-top: 16px;
+    padding-top: 50px;
 }
 
 .socials .circle {
     width: 40px;
     height: 40px;
     border-radius: 999px;
-    border: 1px solid #eee;
+    border: 1px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -425,7 +420,7 @@ footer.site-footer {
 .copy {
     margin-top: 16px;
     color: #999;
-    text-align: center;
+    text-align: left;
     font-size: 13px;
 }
 

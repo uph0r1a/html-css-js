@@ -1,165 +1,193 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 #sale img {
-    width: 95%;
+    width: 100%;
+    height: auto;
 }
 
 #header {
-    height: 46.5px;
+    height: 60px;
     background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#nav li {
-    display: inline-block;
+#nav {
+    display: flex;
+    list-style: none;
+    gap: 24px;
 }
 
 #nav li a {
-    display: inline-block;
     text-decoration: none;
     text-transform: uppercase;
     color: white;
-    padding: 0 24px;
-    line-height: 46.5px;
-    text-align: center;
+    padding: 0 10px;
+    line-height: 60px;
+    transition: color 0.3s;
+}
 
+#nav li a:hover {
+    color: #ffb74d;
 }
 
 #intro {
     margin: 20px;
-    padding: 20px 20px 20px 20px;
-}
-
-#intro h1 {
+    padding: 20px;
     text-align: center;
-    text-decoration: none;
-    text-transform: capitalize;
 }
 
+#intro h1,
 #intro h2 {
-    text-align: center;
-    text-decoration: none;
     text-transform: capitalize;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 #intro p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
-    font-size: x-large;
-    padding-left: 300px;
-    padding-right: 300px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 20px auto;
+    line-height: 1.6;
 }
 
 #intro img {
     width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+#intro #quote {
+    text-align: center;
+    margin-top: 40px;
 }
 
 #intro #quote img {
-    height: 10%;
-    width: 10%;
-    padding-left: 300px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
 }
 
 #intro #quote h2 {
-    padding-left: 700px;
+    margin-top: 10px;
 }
 
 #product {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
     margin: 20px;
-    padding: 20px 20px 20px 20px;
+}
+
+#product>div {
+    width: 300px;
+    text-align: center;
 }
 
 #product img {
+    width: 100%;
     height: 300px;
-    width: 300px;
-    padding: 20 20 20 20;
     border-radius: 10px;
+    object-fit: cover;
 }
 
 #product h3 {
-    text-align: center;
-    text-decoration: none;
+    margin-top: 10px;
     text-transform: capitalize;
 }
 
 #product h4 {
-    text-align: center;
     color: gray;
     font-size: smaller;
+    margin-top: 5px;
 }
 
 #map {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    margin: 40px 0;
 }
 
 #map iframe {
-    width: 95%;
-}
-
-#address {
-    display: flex;
-    flex-direction: row;
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    border: 0;
 }
 
 #question h1 {
     text-align: center;
     text-decoration: underline;
+    margin: 40px 0;
 }
 
 #contact {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
     margin: 20px;
-    justify-content: center
 }
 
 #contact .contact-text {
     text-align: center;
-    margin: 15px 0;
     text-transform: uppercase;
-    padding-left: 250px;
-    padding-right: 30px;
 }
 
-#contact .contact-info {
-    text-align: center;
+#contact .contact-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 #contact .contact-input input {
-    width: 100%;
-    height: 46.5px;
+    width: 300px;
+    max-width: 100%;
+    padding: 10px;
     border: none;
     border-bottom: 1px solid grey;
-    padding-right: 90px;
+    font-size: 1rem;
 }
 
 .contact-button {
-    display: flex;
-    padding-left: 1100px;
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 50px;
 }
 
 button {
-    margin: 15px 0;
     border: none;
     background-color: #000;
     color: #fff;
-    padding: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
 }
 
 button:hover {
     background-color: #ccc;
     color: #000;
+}
+
+@media (max-width: 768px) {
+    #intro p {
+        padding: 0 20px;
+        font-size: 1rem;
+    }
+
+    #product>div {
+        width: 90%;
+    }
+
+    #contact .contact-input input {
+        width: 100%;
+    }
 }

@@ -3,7 +3,7 @@ let fruitBasket = [
   ["Banana", 10],
   ["Grape", 15],
   ["Orange", 3],
-  ["Kiwi", 8]
+  ["Kiwi", 8],
 ];
 fruitBasket.push(["Mango", 20]);
 fruitBasket.shift();

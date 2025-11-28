@@ -15,30 +15,26 @@
 body {
     color: var(--white);
     background-color: var(--dark-grey);
+    font-family: sans-serif;
 }
 
 .title-container {
-    margin: 10px 0;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
+    margin: 20px 0;
 }
 
 .title {
     font-size: 2.5rem;
 }
 
-.date-svg {
-    width: 30px;
-    height: 30px;
-}
-
 .divider {
-    margin: auto;
     width: 150px;
     height: 10px;
     background-color: var(--yellow);
+    margin: 20px auto;
 }
 
 .dropdown-container {
@@ -49,10 +45,9 @@ body {
 
 select {
     display: block;
-    margin: 20px auto 0;
     width: 100%;
     height: 50px;
-    font-size: 100%;
+    font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
     background-color: var(--white);
@@ -61,10 +56,6 @@ select {
     appearance: none;
     padding: 10px;
     padding-right: 38px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    transition: color 0.3s ease, background-color 0.3s ease,
-        border-bottom-color 0.3s ease;
 }
 
 .select-icon {
@@ -74,18 +65,16 @@ select {
     width: 30px;
     height: 36px;
     pointer-events: none;
-    padding-left: 5px;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .select-icon svg.icon {
-    transition: fill 0.3s ease;
     fill: var(--dark-grey);
 }
 
 #current-date {
     font-size: 2rem;
     text-align: center;
+    margin-top: 20px;
 }
 
 @media (max-width: 375px) {
@@ -95,9 +84,5 @@ select {
 
     .dropdown-container {
         width: 80%;
-    }
-
-    .date-svg {
-        display: none;
     }
 }

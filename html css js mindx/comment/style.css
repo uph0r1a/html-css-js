@@ -1,16 +1,41 @@
 h1 {
   text-align: center;
   font-size: 50px;
+  margin-bottom: 50px;
 }
 
-p {
-  width: 30%;
-  float: left;
-  background-color: white;
-  text-align: left;
-  font-family: sylfaen;
-  font-size: 30px;
-  color: grey;
-  margin: 20px 20px 20px 20px;
+.testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 20px;
+}
 
+.testimonial {
+  background-color: white;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.testimonial .text {
+  font-family: Sylfaen, serif;
+  font-size: 18px;
+  color: grey;
+  margin-bottom: 15px;
+}
+
+.testimonial .author {
+  font-weight: bold;
+  text-align: right;
+  color: #333;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .testimonial {
+    width: 100%;
+  }
 }

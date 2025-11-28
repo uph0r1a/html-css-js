@@ -4,15 +4,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="freeCodeCamp Accessibility Quiz practice project" />
+    <meta name="description" content="HTML/CSS Accessibility Quiz practice project" />
     <title>Accessibility Quiz</title>
     <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
     <header>
-        <img id="logo" alt="freeCodeCamp" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg">
-        <h1>HTML/CSS Quiz</h1>
+        <h1>HTML/CSS Accessibility Quiz</h1>
         <nav>
             <ul>
                 <li><a href="#student-info">INFO</a></li>
@@ -22,7 +21,7 @@
         </nav>
     </header>
     <main>
-        <form method="post" action="https://freecodecamp.org/practice-project/accessibility-quiz">
+        <form method="post" action="#">
             <section role="region" aria-labelledby="student-info">
                 <h2 id="student-info">Student Info</h2>
                 <div class="info">
@@ -38,6 +37,7 @@
                     <input type="date" name="birth-date" id="birth-date" />
                 </div>
             </section>
+
             <section role="region" aria-labelledby="html-questions">
                 <h2 id="html-questions">HTML</h2>
                 <div class="question-block">
@@ -63,6 +63,7 @@
                         </ul>
                     </fieldset>
                 </div>
+
                 <div class="question-block">
                     <h3><span class="sr-only">Question</span>2</h3>
                     <fieldset class="question" name="html-question-two">
@@ -87,6 +88,7 @@
                     </fieldset>
                 </div>
             </section>
+
             <section role="region" aria-labelledby="css-questions">
                 <h2 id="css-questions">CSS</h2>
                 <div class="formrow">
@@ -100,6 +102,7 @@
                             <option value="no">No</option>
                         </select>
                     </div>
+
                     <div class="question-block">
                         <label for="css-textarea">Do you have any questions:</label>
                     </div>
@@ -108,15 +111,16 @@
                     </div>
                 </div>
             </section>
+
             <button type="submit">Send</button>
         </form>
     </main>
+
     <footer>
         <address>
-            <a href="https://freecodecamp.org">freeCodeCamp</a><br />
-            San Francisco<br />
-            California<br />
-            USA
+            Quiz Project<br />
+            Your City<br />
+            Your Country
         </address>
     </footer>
 </body>
