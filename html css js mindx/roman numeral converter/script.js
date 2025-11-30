@@ -1,77 +1,68 @@
-const form = document.getElementById('form');
-const convertButton = document.getElementById('convert-btn');
-const output = document.getElementById('output');
+const form = document.getElementById("form");
+const convertButton = document.getElementById("convert-btn");
+const output = document.getElementById("output");
+const numberInput = document.getElementById("number");
 
-const convertToRoman = num => {
-    const ref = [
-        ['M', 1000],
-        ['CM', 900],
-        ['D', 500],
-        ['CD', 400],
-        ['C', 100],
-        ['XC', 90],
-        ['L', 50],
-        ['XL', 40],
-        ['X', 10],
-        ['IX', 9],
-        ['V', 5],
-        ['IV', 4],
-        ['I', 1]
-    ];
-    const res = [];
+const ROMAN_MAP = [
+  ["M", 1000],
+  ["CM", 900],
+  ["D", 500],
+  ["CD", 400],
+  ["C", 100],
+  ["XC", 90],
+  ["L", 50],
+  ["XL", 40],
+  ["X", 10],
+  ["IX", 9],
+  ["V", 5],
+  ["IV", 4],
+  ["I", 1],
+];
 
-    ref.forEach(function (arr) {
-        while (num >= arr[1]) {
-            res.push(arr[0]);
-            num -= arr[1];
-        }
-    });
-
-    return res.join('');
-};
-
-const isValid = (str, int) => {
-    let errText = '';
-
-    if (!str || str.match(/[e.]/g)) {
-        errText = 'Please enter a valid number.';
-    } else if (int < 1) {
-        errText = 'Please enter a number greater than or equal to 1.';
-    } else if (int > 3999) {
-        errText = 'Please enter a number less than or equal to 3999.';
-    } else {
-        return true;
+const convertToRoman = (num) => {
+  let result = "";
+  for (const [roman, value] of ROMAN_MAP) {
+    while (num >= value) {
+      result += roman;
+      num -= value;
     }
-
-    output.innerText = errText;
-    output.classList.add('alert');
-
-    return false;
+  }
+  return result;
 };
 
-const clearOutput = () => {
-    output.innerText = '';
-    output.classList.remove('alert');
+const validateInput = (inputValue) => {
+  const num = parseInt(inputValue, 10);
+
+  if (!inputValue || inputValue.includes("e") || inputValue.includes(".")) {
+    return "Please enter a valid number.";
+  }
+  if (num < 1) {
+    return "Please enter a number greater than or equal to 1.";
+  }
+  if (num > 3999) {
+    return "Please enter a number less than or equal to 3999.";
+  }
+  return null;
 };
-
-form.addEventListener('submit', e => {
-    e.preventDefault();
-    updateUI();
-});
-
-convertButton.addEventListener('click', () => {
-    updateUI();
-});
 
 const updateUI = () => {
-    const numStr = document.getElementById('number').value;
-    const int = parseInt(numStr, 10);
+  const inputValue = numberInput.value.trim();
+  const error = validateInput(inputValue);
 
-    output.classList.remove('hidden');
+  output.classList.remove("hidden");
+  output.classList.remove("alert");
 
-    clearOutput();
-
-    if (isValid(numStr, int)) {
-        output.innerText = convertToRoman(int);
-    }
+  if (error) {
+    output.innerText = error;
+    output.classList.add("alert");
+  } else {
+    output.innerText = convertToRoman(parseInt(inputValue, 10));
+  }
 };
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  updateUI();
+});
+
+convertButton.addEventListener("click", updateUI);

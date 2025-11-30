@@ -1,15 +1,16 @@
 let event = [];
 let user = [];
-const isLogin = JSON.parse(sessionStorage.getItem("isLogin"));
-function checkLogin() {
-  if (!isLogin) {
+const isLogin = sessionStorage.getItem("isLogin");
+const checkLogin = () => {
+  const isLogin = sessionStorage.getItem("isLogin");
+  if (isLogin !== "true") {
     window.location.href = "login.html";
   }
-}
+};
 
 checkLogin();
 
-setInterval(checkLogin, 500);
+setInterval(checkLogin,500);
 
 document.getElementById("eventTab").addEventListener("click", () => {
   window.location.href = "event.html";

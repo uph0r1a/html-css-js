@@ -1,11 +1,11 @@
-let user = [];
+let users = []; // Array to store user objects
 const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
 const tbody = document.getElementById("tbody");
-let count = 1;
 
 document.getElementById("form").addEventListener("submit", (e) => {
   e.preventDefault();
+
   const name = nameInput.value.trim();
   const email = emailInput.value.trim();
   const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -17,54 +17,47 @@ document.getElementById("form").addEventListener("submit", (e) => {
   if (!emailPattern.test(email)) {
     alert("Invalid email");
     return;
-  } else {
-    user.push({
-      id: count,
-      name,
-      email,
-    });
-
-    renderTable();
-    nameInput.value = "";
-    emailInput.value = "";
-    count++;
   }
+
+  users.push({ name, email });
+
+  renderTable();
+
+  nameInput.value = "";
+  emailInput.value = "";
 });
 
 function renderTable() {
   tbody.innerHTML = "";
 
-  user.filter((u, index) => {
-    u.id = index + 1;
+  users.forEach((user, index) => {
+    user.id = index + 1;
 
     const tr = document.createElement("tr");
 
-    const tdid = document.createElement("td");
-    tdid.textContent = u.id;
+    const tdId = document.createElement("td");
+    tdId.textContent = user.id;
 
-    const tdname = document.createElement("td");
-    tdname.textContent = u.name;
+    const tdName = document.createElement("td");
+    tdName.textContent = user.name;
 
-    const tdemail = document.createElement("td");
-    tdemail.textContent = u.email;
+    const tdEmail = document.createElement("td");
+    tdEmail.textContent = user.email;
 
-    const tddel = document.createElement("td");
-    const del = document.createElement("del");
-    del.textContent = "Delete";
-    tddel.appendChild(del);
-
-    del.addEventListener("click", () => {
-      user = user.filter((item) => item !== p);
+    const tdAction = document.createElement("td");
+    const delBtn = document.createElement("button");
+    delBtn.textContent = "Delete";
+    delBtn.addEventListener("click", () => {
+      users = users.filter((u) => u !== user);
       renderTable();
     });
+    tdAction.appendChild(delBtn);
 
-    tr.appendChild(tdid);
-    tr.appendChild(tdname);
-    tr.appendChild(tdemail);
-    tr.appendChild(tddel);
+    tr.appendChild(tdId);
+    tr.appendChild(tdName);
+    tr.appendChild(tdEmail);
+    tr.appendChild(tdAction);
 
     tbody.appendChild(tr);
   });
-
-  count = user.length + 1;
 }

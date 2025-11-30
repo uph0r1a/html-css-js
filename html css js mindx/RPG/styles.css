@@ -1,6 +1,6 @@
 body {
     position: relative;
-    background-image: url('https://images.ctfassets.net/swt2dsco9mfe/48j4mmlonfnm2WbVseMkh7/0f18a7fd33fe37a39fbe134b43d477ca/placeholder.jpg');
+    background-image: url('./placeholder.jpg');
     background-color: #0a0a23;
     background-size: cover;
     background-position: center;

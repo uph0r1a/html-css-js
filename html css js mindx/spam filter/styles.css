@@ -19,15 +19,12 @@
 body {
     background-color: var(--dark-grey);
     color: var(--light-grey);
-}
-
-body,
-#message-input:placeholder-shown {
     text-align: center;
 }
 
 textarea {
     max-width: 90%;
+    font-size: 1.1rem;
 }
 
 .main-text {
@@ -47,11 +44,6 @@ textarea {
     display: block;
     margin-bottom: 20px;
     font-size: 1.5rem;
-}
-
-#message-input:placeholder-shown,
-textarea {
-    font-size: 1.1rem;
 }
 
 .btn {

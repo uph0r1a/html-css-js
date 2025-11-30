@@ -21,6 +21,7 @@
 
 body {
     background-color: var(--dark-grey);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .title {

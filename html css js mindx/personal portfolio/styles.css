@@ -22,6 +22,7 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Responsive font scaling */
 @media (max-width: 75em) {
     html {
         font-size: 60%;
@@ -48,8 +49,7 @@ body {
     color: var(--main-white);
 }
 
-h1,
-h2 {
+h1, h2 {
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     text-align: center;
@@ -77,6 +77,7 @@ img {
     width: 100%;
 }
 
+/* NAVIGATION */
 nav {
     display: flex;
     justify-content: flex-end;
@@ -114,6 +115,7 @@ nav {
     background: var(--main-blue);
 }
 
+/* WELCOME SECTION */
 .welcome-section {
     display: flex;
     flex-direction: column;
@@ -132,6 +134,7 @@ nav {
     color: var(--main-red);
 }
 
+/* PROJECTS */
 .projects-section {
     text-align: center;
     padding: 10rem 2rem;
@@ -144,30 +147,13 @@ nav {
     border-bottom: 0.2rem solid var(--main-white);
 }
 
-@media (max-width: 28.75em) {
-    .projects-section-header {
-        font-size: 4rem;
-    }
-}
-
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: 4rem;
     width: 100%;
     max-width: 1280px;
-    margin: 0 auto;
-    margin-bottom: 6rem;
-}
-
-@media (max-width: 30.625em) {
-    .projects-section {
-        padding: 6rem 1rem;
-    }
-
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
+    margin: 0 auto 6rem auto;
 }
 
 .project {
@@ -212,11 +198,7 @@ nav {
     background: var(--main-red);
 }
 
-.btn-show-all>i {
-    margin-left: 10px;
-    transition: transform 0.3s ease-out;
-}
-
+/* CONTACT */
 .contact-section {
     display: flex;
     flex-direction: column;
@@ -231,16 +213,6 @@ nav {
 
 .contact-section-header>h2 {
     font-size: 6rem;
-}
-
-@media (max-width: 28.75em) {
-    .contact-section-header>h2 {
-        font-size: 4rem;
-    }
-}
-
-.contact-section-header>p {
-    font-style: italic;
 }
 
 .contact-links {
