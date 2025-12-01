@@ -1,3 +1,19 @@
+const scrollBtn = document.createElement("button");
+scrollBtn.id = "scrollTop";
+scrollBtn.textContent = "↑";
+document.body.appendChild(scrollBtn);
+
+window.onscroll = () => {
+  scrollBtn.style.display =
+    document.body.scrollTop > 100 || document.documentElement.scrollTop > 100
+      ? "block"
+      : "none";
+};
+
+scrollBtn.onclick = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
 const emailInput = document.getElementById("email");
 const passwordInput = document.getElementById("password");
 const rememberme = document.getElementById("rememberme");

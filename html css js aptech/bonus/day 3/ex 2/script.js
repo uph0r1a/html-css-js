@@ -1,4 +1,4 @@
-let users = []; // Array to store user objects
+let users = JSON.parse(localStorage.getItem("User")) || [];
 const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
 const tbody = document.getElementById("tbody");
@@ -22,7 +22,7 @@ document.getElementById("form").addEventListener("submit", (e) => {
   users.push({ name, email });
 
   renderTable();
-
+  localStorage.setItem("User", JSON.stringify(users));
   nameInput.value = "";
   emailInput.value = "";
 });
@@ -50,6 +50,7 @@ function renderTable() {
     delBtn.addEventListener("click", () => {
       users = users.filter((u) => u !== user);
       renderTable();
+      localStorage.setItem("User", JSON.stringify(users));
     });
     tdAction.appendChild(delBtn);
 

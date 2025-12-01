@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name">
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+
+        <label for="role">Role</label>
+        <select name="role" id="role">
+            <option value="Admin">Admin</option>
+            <option value="User">User</option>
+        </select>
+
+        <label for="registeredDate">Registered Date</label>
+        <input type="date" name="registeredDate" id="registeredDate">
+
+        <button type="submit" id="add">Add</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Registered Date</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+    <script src="user.js"></script>
+</body>
+</html>

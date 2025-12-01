@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #ece9e6, #ffffff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background 0.3s;
+}
+
+form {
+    background: white;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 400px;
+    display: grid;
+    gap: 20px;
+    transition: all 0.3s;
+}
+
+form label {
+    font-weight: 600;
+    color: #333;
+}
+
+form input[type="email"],
+form input[type="password"] {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form input[type="email"]:focus,
+form input[type="password"]:focus {
+    border-color: #1976d2;
+    box-shadow: 0 0 6px rgba(25, 118, 210, 0.3);
+    outline: none;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.checkbox-container input[type="checkbox"] {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.checkbox-container label {
+    cursor: pointer;
+    font-weight: normal;
+}
+
+
+form input[type="checkbox"] {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+form label[for="rememberme"] {
+    display: inline-block;
+    margin-left: 8px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+#btn {
+    padding: 12px;
+    background-color: #1976d2;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+#btn:hover {
+    background-color: #1565c0;
+    transform: translateY(-2px);
+}
+
+#scrollTop {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #1976d2;
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#scrollTop:hover {
+    background: #1565c0;
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+    form {
+        padding: 25px 30px;
+    }
+
+    #btn {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 767px) {
+    form {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    #btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+form input,
+#btn {
+    transition: all 0.3s ease;
+}

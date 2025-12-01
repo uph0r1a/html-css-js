@@ -1,42 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Event Dashboard</title>
+    <link rel="stylesheet" href="event.css">
 </head>
+
 <body>
+
+    <button id="scrollTop" title="Go to top">↑</button>
+
     <form id="form">
         <label for="eventName">Event name</label>
-        <input type="text" name="eventName" id="eventName" placeholder="Enter event name">
+        <input type="text" name="eventName" id="eventName" placeholder="Enter event name" required>
 
         <label for="eventCategory">Event category</label>
-        <select name="eventCategory" id="eventCategory">
-            <option value="music">Music</option>
-            <option value="tech">Tech</option>
-            <option value="sport">Sport</option>
+        <select name="eventCategory" id="eventCategory" required>
+            <option value="Music">Music</option>
+            <option value="Tech">Tech</option>
+            <option value="Sport">Sport</option>
         </select>
 
         <label for="eventDate">Event Date</label>
-        <input type="date" name="eventDate" id="eventDate" placeholder="Enter event date">
+        <input type="date" name="eventDate" id="eventDate" required>
 
         <label for="eventLocation">Event location</label>
-        <input type="text" name="eventLocation" id="eventLocation" placeholder="Enter event location">
+        <input type="text" name="eventLocation" id="eventLocation" required>
 
         <label for="eventPrice">Event price</label>
-        <input type="number" name="eventPrice" id="eventPrice" placeholder="Enter event price">
+        <input type="number" name="eventPrice" id="eventPrice" min="0" required>
 
         <label for="eventSeats">Event seats</label>
-        <input type="number" name="eventSeats" id="eventSeats" placeholder="Enter event seats">
+        <input type="number" name="eventSeats" id="eventSeats" min="0" required>
 
-        <label for="eventLocation">Event thumbnail</label>
+        <label for="eventThumbnail">Event thumbnail</label>
         <input type="file" name="eventThumbnail" id="eventThumbnail" accept="image/*">
 
         <button type="submit" id="add">Add</button>
     </form>
 
-    <button id="dashBoard">Go back to dash board</button>
-    <button id="logout">Log out</button>
+    <div class="buttons">
+        <button id="dashBoard">Go back to dashboard</button>
+        <button id="logout">Log out</button>
+    </div>
 
     <table>
         <thead>
@@ -52,9 +60,18 @@
                 <th>Action</th>
             </tr>
         </thead>
-        <tbody id="tbody">
-        </tbody>
+        <tbody id="tbody"></tbody>
     </table>
-    <script src="./event.js"></script>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Edit Event</h2>
+            <p>You can confirm or cancel your changes</p>
+        </div>
+    </div>
+
+    <script src="event.js"></script>
 </body>
+
 </html>

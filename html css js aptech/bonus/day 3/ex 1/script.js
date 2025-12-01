@@ -1,4 +1,4 @@
-let product = [];
+let product = JSON.parse(localStorage.getItem("Product")) || [];
 const nameInput = document.getElementById("name");
 const priceInput = document.getElementById("price");
 const tbody = document.getElementById("tbody");
@@ -20,6 +20,7 @@ document.getElementById("form").addEventListener("submit", (e) => {
     product.push({ id: count, name, price });
 
     renderTable();
+    localStorage.setItem("Product", JSON.stringify(product));
     nameInput.value = "";
     priceInput.value = "";
     count++;
@@ -51,6 +52,7 @@ function renderTable() {
     del.addEventListener("click", () => {
       product = product.filter((item) => item !== p);
       renderTable();
+      localStorage.setItem("Product", JSON.stringify(product));
     });
 
     tr.appendChild(tdid);
