@@ -16,8 +16,8 @@ body {
 form {
     background: #fff;
     max-width: 600px;
-    margin: 30px auto;
-    padding: 30px;
+    margin: 20px auto;
+    padding: 25px;
     border-radius: 8px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
@@ -37,6 +37,8 @@ form input, form select {
 }
 
 form button {
+    display: flex;
+    justify-content: center;
     width: 100%;
     padding: 12px;
     background: #007bff;
@@ -51,38 +53,47 @@ form button:hover {
     background: #0056b3;
 }
 
-.buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 30px;
-}
-
-.buttons button {
+#dashBoard, #logout {
     padding: 10px 20px;
+    margin: 10px;
     border-radius: 5px;
-    background: #28a745;
     color: #fff;
     border: none;
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#dashBoard {
+    background: #28a745;
 }
 
 #logout {
     background: #c82333;
 }
 
-#logout:hover {
-    background: #871823;
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
 }
 
-.buttons button:hover {
+#dashBoard:hover {
     background: #218838;
+}
+
+#logout:hover {
+    background: #871823;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 50px;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 table th, table td {
@@ -105,6 +116,7 @@ table button {
     border-radius: 5px;
     border: none;
     cursor: pointer;
+    margin-right: 5px;
 }
 
 table .change {
@@ -123,33 +135,6 @@ table .delete {
 
 table .delete:hover {
     background: #c82333;
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.modal-content {
-    background: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    max-width: 500px;
-    width: 90%;
-}
-
-.modal-content .close {
-    float: right;
-    font-size: 28px;
-    cursor: pointer;
 }
 
 #scrollTop {
@@ -173,14 +158,19 @@ table .delete:hover {
 }
 
 @media (max-width: 767px) {
+    .button-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
     form {
-        margin: 20px;
+        margin: 15px;
         padding: 20px;
     }
 
-    .buttons {
-        flex-direction: column;
-        gap: 10px;
+    #dashBoard, #logout {
+        width: 100%;
+        margin-bottom: 10px;
     }
 
     table th, table td {

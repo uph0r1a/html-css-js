@@ -1,140 +1,179 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Arial', sans-serif;
+    transition: all 0.3s ease;
 }
 
 body {
-    background: linear-gradient(135deg, #ece9e6, #ffffff);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    transition: background 0.3s;
+    background: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    min-height: 2000px;
+    padding: 20px;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
 }
 
 form {
-    background: white;
-    padding: 30px 40px;
-    border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    width: 100%;
+    background: #fff;
     max-width: 400px;
-    display: grid;
-    gap: 20px;
-    transition: all 0.3s;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 form label {
-    font-weight: 600;
-    color: #333;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
 form input[type="email"],
 form input[type="password"] {
-    padding: 12px;
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
     border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 14px;
-    transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-form input[type="email"]:focus,
-form input[type="password"]:focus {
-    border-color: #1976d2;
-    box-shadow: 0 0 6px rgba(25, 118, 210, 0.3);
-    outline: none;
+    border-radius: 5px;
 }
 
 .checkbox-container {
     display: flex;
     align-items: center;
-    gap: 8px;
+    margin-bottom: 20px;
 }
 
-.checkbox-container input[type="checkbox"] {
-    transform: scale(1.1);
-    cursor: pointer;
+.checkbox-container input {
+    margin-right: 10px;
 }
 
-.checkbox-container label {
-    cursor: pointer;
-    font-weight: normal;
-}
-
-
-form input[type="checkbox"] {
-    transform: scale(1.1);
-    cursor: pointer;
-}
-
-form label[for="rememberme"] {
-    display: inline-block;
-    margin-left: 8px;
-    font-weight: normal;
-    cursor: pointer;
-}
-
-#btn {
+form button {
+    width: 100%;
     padding: 12px;
-    background-color: #1976d2;
-    color: white;
-    font-weight: bold;
+    background: #007bff;
+    color: #fff;
     font-size: 16px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
-}
-
-#btn:hover {
-    background-color: #1565c0;
-    transform: translateY(-2px);
-}
-
-#scrollTop {
-    display: none;
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background: #1976d2;
-    color: white;
-    border: none;
-    padding: 12px 16px;
-    border-radius: 50%;
-    font-size: 20px;
-    cursor: pointer;
+    border-radius: 5px;
     transition: background 0.3s;
 }
 
-#scrollTop:hover {
-    background: #1565c0;
+form button:hover {
+    background: #0056b3;
 }
 
-@media (max-width: 1023px) and (min-width: 768px) {
-    form {
-        padding: 25px 30px;
-    }
+#scrollTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px 15px;
+    font-size: 20px;
+    background: #007bff;
+    color: #fff;
+    border-radius: 50%;
+    display: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
 
-    #btn {
-        font-size: 15px;
-    }
+#scrollTop:hover {
+    background: #0056b3;
+    transform: translateY(-3px);
+}
+
+.card-grid {
+    display: grid;
+    gap: 20px;
+    margin: 50px;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #007bff;
+    color: #fff;
+    padding: 20px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.mobile-menu.active {
+    left: 0;
+}
+
+.mobile-menu a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+
+.mobile-menu a:hover {
+    text-decoration: underline;
 }
 
 @media (max-width: 767px) {
     form {
+        margin: 20px;
         padding: 20px;
-        margin: 10px;
     }
 
-    #btn {
-        font-size: 14px;
-        padding: 10px;
+    .card-grid {
+        grid-template-columns: 1fr;
     }
 }
 
-form input,
-#btn {
-    transition: all 0.3s ease;
+@media (min-width: 768px) and (max-width: 1023px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .card-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }

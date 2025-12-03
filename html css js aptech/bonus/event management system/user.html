@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="user.css">
 </head>
+
 <body>
+
+    <button id="scrollTop" title="Go to top">↑</button>
+
     <form id="form">
         <label for="name">Name</label>
         <input type="text" name="name" id="name">
@@ -25,6 +31,26 @@
         <button type="submit" id="add">Add</button>
     </form>
 
+    <form id="search">
+        <label for="roleSearch">Filter by role</label>
+        <select name="roleSearch" id="roleSearch">
+            <option value="All">All role</option>
+            <option value="Admin">Admin</option>
+            <option value="User">User</option>
+        </select>
+
+        <label for="emailSearch">Search by email</label>
+        <input type="email" name="emailSearch" id="emailSearch">
+
+        <button type="submit" id="searchBtn">Search</button>
+    </form>
+
+    <div class="button-container">
+        <button id="dashBoard">Dashboard</button>
+        <button id="logout">Log out</button>
+    </div>
+
+
     <table>
         <thead>
             <tr>
@@ -33,6 +59,7 @@
                 <th>Email</th>
                 <th>Role</th>
                 <th>Registered Date</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody id="tbody">
@@ -41,4 +68,5 @@
     </table>
     <script src="user.js"></script>
 </body>
+
 </html>

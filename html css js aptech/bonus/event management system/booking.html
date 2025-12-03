@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Page</title>
+    <link rel="stylesheet" href="booking.css">
+</head>
+
+<body>
+
+    <h1>Event Booking</h1>
+    <button id="dashBoard">Dashboard</button>
+    <button id="logout">Logout</button>
+    <div id="eventGrid" class="grid"></div>
+    <div class="pagination" id="pagination"></div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalCategory"></p>
+            <p id="modalDate"></p>
+            <p id="modalLocation"></p>
+            <p>Price: $<span id="modalPrice"></span></p>
+            <p>Seats left: <span id="modalSeats"></span></p>
+
+            <div>
+                <label>Quantity: <input type="number" id="ticketQuantity" min="1" value="1"></label>
+            </div>
+            <p>Total: $<span id="totalPrice"></span></p>
+            <button id="bookBtn">Book Now</button>
+            <p id="loadingMsg" style="display:none;">Processing payment...</p>
+        </div>
+    </div>
+
+    <script src="booking.js"></script>
+</body>
+
+</html>

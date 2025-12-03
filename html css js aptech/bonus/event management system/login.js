@@ -3,40 +3,48 @@ scrollBtn.id = "scrollTop";
 scrollBtn.textContent = "↑";
 document.body.appendChild(scrollBtn);
 
-window.onscroll = () => {
+window.addEventListener("scroll", () => {
   scrollBtn.style.display =
-    document.body.scrollTop > 100 || document.documentElement.scrollTop > 100
-      ? "block"
-      : "none";
-};
+    document.documentElement.scrollTop > 100 ? "block" : "none";
+});
 
-scrollBtn.onclick = () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-};
+scrollBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
 const emailInput = document.getElementById("email");
 const passwordInput = document.getElementById("password");
 const rememberme = document.getElementById("rememberme");
 
-let adminAccount = {
-  email: "admin@example.com",
-  password: "123456",
-};
-localStorage.setItem("Account", JSON.stringify(adminAccount));
+let accounts = JSON.parse(localStorage.getItem("Account")) || [];
 
-const account = JSON.parse(localStorage.getItem("Account"));
-const rememberedAccount = JSON.parse(localStorage.getItem("Remember account"));
+if (accounts.length === 0) {
+  const adminAccount = {
+    id: Date.now(),
+    accountName: "",
+    accountEmail: "admin@example.com",
+    accountRole: "Admin",
+    accountRegisteredDate: "",
+    password: "123456",
+  };
 
-if (rememberedAccount) {
-  setTimeout(() => {
-    emailInput.value = rememberedAccount.email;
-    passwordInput.value = rememberedAccount.password;
-    rememberme.checked = true;
-  }, 1000);
+  accounts.push(adminAccount);
+  localStorage.setItem("Account", JSON.stringify(accounts));
+}
+
+const remembered = JSON.parse(localStorage.getItem("Remember account"));
+
+if (remembered) {
+  emailInput.value = remembered.email;
+  passwordInput.value = remembered.password;
+  rememberme.checked = true;
+}
+
+if (sessionStorage.getItem("isLogin") === "true") {
+  window.location.href = "dashboard.html";
 }
 
 document.getElementById("form").addEventListener("submit", (e) => {
   e.preventDefault();
+
   const email = emailInput.value.trim();
   const password = passwordInput.value.trim();
   const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -47,21 +55,28 @@ document.getElementById("form").addEventListener("submit", (e) => {
   }
 
   if (password.length < 6) {
-    alert("Password must be atleast 6 characters");
+    alert("Password must be at least 6 characters");
     return;
   }
 
-  if (email !== account.email || password !== account.password) {
+  const account = accounts.find(
+    (acc) => acc.accountEmail === email && acc.password === password
+  );
+
+  if (!account) {
     alert("Invalid email or password");
-  } else {
-    if (rememberme.checked) {
-      let rememberAccount = {
-        email: email,
-        password: password,
-      };
-      localStorage.setItem("Remember account", JSON.stringify(rememberAccount));
-    }
-    sessionStorage.setItem("isLogin", "true");
-    window.location.href = "dashboard.html";
+    return;
   }
+
+  if (rememberme.checked) {
+    localStorage.setItem(
+      "Remember account",
+      JSON.stringify({ email, password })
+    );
+  } else {
+    localStorage.removeItem("Remember account");
+  }
+
+  sessionStorage.setItem("isLogin", "true");
+  window.location.href = "dashboard.html";
 });
