@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./meal_style.css">
+</head>
+
+<body>
+    <form id="form">
+        <h1>Guest Meal Tracker</h1>
+        <label for="name">Guest Name:</label>
+        <input type="text" name="name" id="name" required>
+        <select name="type" id="type">
+            <option value="vegetarian">Vegetarian</option>
+            <option value="nonvegetarian">Non-Vegetarian</option>
+            <option value="vegan">Vegan</option>
+            <option value="kids">Kids</option>
+        </select>
+        <button type="submit">Add Meal</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Guest Name</th>
+                <th>Meal Type</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+
+    <span>Meal Count:</span>
+    <ul id="countlist">
+    </ul>
+    <script src="./meal_script.js"></script>
+</body>
+
+</html>
