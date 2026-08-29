@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Events Schedule</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="page-header">
+        <h1>Sports Events Schedule</h1>
+        <p class="subtitle">Upcoming and past events at a glance</p>
+    </header>
+
+    <main>
+        <div class="controls">
+            <button id="sortBtn" type="button">Sort by Date ▲</button>
+
+            <div class="filter-group">
+                <label for="statusFilter">Filter by status</label>
+                <select id="statusFilter">
+                    <option value="All">All</option>
+                    <option value="Scheduled">Scheduled</option>
+                    <option value="Completed">Completed</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="table-wrap">
+            <table id="eventTable">
+                <thead>
+                    <tr>
+                        <th>Event ID</th>
+                        <th>Name</th>
+                        <th>Sport</th>
+                        <th>Date</th>
+                        <th>Venue</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+
+        <p id="emptyState" class="empty-state" hidden>No events match this filter.</p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

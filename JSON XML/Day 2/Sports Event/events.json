@@ -1,0 +1,28 @@
+{
+    "events": [
+        {
+            "id": 201,
+            "name": "Super Bowl LVIII",
+            "sport": "American Football",
+            "date": "2024-02-11",
+            "venue": "Allegiant Stadium",
+            "status": "Scheduled"
+        },
+        {
+            "id": 202,
+            "name": "Wimbledon Men's Final",
+            "sport": "Tennis",
+            "date": "2024-07-14",
+            "venue": "Centre Court",
+            "status": "Completed"
+        },
+        {
+            "id": 203,
+            "name": "F1 Grand Prix - Monaco",
+            "sport": "Formula 1",
+            "date": "2024-05-26",
+            "venue": "Monaco Circuit",
+            "status": "Scheduled"
+        }
+    ]
+}

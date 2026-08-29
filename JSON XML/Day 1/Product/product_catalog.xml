@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="product_catalog.xslt" type="text/xsl"?>
+
+<store>
+    <title>Product Catalog</title>
+    <caption>Available Products</caption>
+    <description>This table lists the products available in the store
+        along with their categories and prices.</description>
+    <products>
+        <product>
+            <id>201</id>
+            <name>Laptop</name>
+            <category>Electronics</category>
+            <price>$800</price>
+        </product>
+        <product>
+            <id>202</id>
+            <name>Chair</name>
+            <category>Furniture</category>
+            <price>$150</price>
+        </product>
+        <product>
+            <id>203</id>
+            <name>Pen</name>
+            <category>Stationery</category>
+            <price>$2</price>
+        </product>
+    </products>
+</store>

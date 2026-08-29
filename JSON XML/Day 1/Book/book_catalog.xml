@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="book_catalog.xslt" type="text/xsl"?>
+
+<library>
+    <title>Book Catalog</title>
+    <caption>Available Books</caption>
+    <description>This table lists the books available in the library along with their authors and
+        prices.</description>
+    <books>
+        <book>
+            <id>101</id>
+            <title>Clean Code</title>
+            <author>Robert C. Martin</author>
+            <price>$35</price>
+        </book>
+        <book>
+            <id>102</id>
+            <title>The Pragmatic Programmer</title>
+            <author>Andrew Hunt</author>
+            <price>$42</price>
+        </book>
+        <book>
+            <id>103</id>
+            <title>Design Patterns</title>
+            <author>Erich Gamma</author>
+            <price>$48</price>
+        </book>
+    </books>
+</library>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="sports.xslt" type="text/xsl"?>
+
+<sports>
+    <title>Upcoming Sports Events</title>
+    <caption>Latest Scheduled Matches</caption>
+    <description>Find information about the latest sports events, including teams, venues, and
+        schedules.</description>
+    <events>
+        <event>
+            <id>101</id>
+            <name>Champions League Final</name>
+            <sport>Soccer</sport>
+            <date>2024-06-01</date>
+            <venue>Wembley Stadium</venue>
+            <status>Scheduled</status>
+        </event>
+        <event>
+            <id>102</id>
+            <name>NBA Finals Game 5</name>
+            <sport>Basketball</sport>
+            <date>2024-06-15</date>
+            <venue>Staples Center</venue>
+            <status>Completed</status>
+        </event>
+        <event>
+            <id>103</id>
+            <name>US Open Tennis Final</name>
+            <sport>Tennis</sport>
+            <date>2024-09-10</date>
+            <venue>Arthur Ashe Stadium</venue>
+            <status>Scheduled</status>
+        </event>
+    </events>
+</sports>

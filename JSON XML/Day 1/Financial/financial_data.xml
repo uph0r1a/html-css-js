@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="financial_data.xslt" type="text/xsl"?>
+
+<finance>
+    <title>Financial Transaction</title>
+    <caption>Monthly Transaction Report</caption>
+    <description>This table displays the detail of the transaction, including type, amount and
+        status.</description>
+
+    <transactions>
+        <transaction>
+            <id>301</id>
+            <date>2025-01-01</date>
+            <type>Credit</type>
+            <amount>1500.0</amount>
+            <status>Completed</status>
+        </transaction>
+
+        <transaction>
+            <id>302</id>
+            <date>2025-01-05</date>
+            <type>Debit</type>
+            <amount>750.0</amount>
+            <status>Pending</status>
+        </transaction>
+
+        <transaction>
+            <id>303</id>
+            <date>2025-01-10</date>
+            <type>Credit</type>
+            <amount>2000.0</amount>
+            <status>Completed</status>
+        </transaction>
+    </transactions>
+</finance>

@@ -1,0 +1,22 @@
+{
+    "products": [
+        {
+            "id": 501,
+            "name": "Desk",
+            "price": "$120",
+            "category": "Furniture"
+        },
+        {
+            "id": 502,
+            "name": "Mouse",
+            "price": "$25",
+            "category": "Electronics"
+        },
+        {
+            "id": 503,
+            "name": "Notebook",
+            "price": "$5",
+            "category": "Stationary"
+        }
+    ]
+}
